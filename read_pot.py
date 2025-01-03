@@ -1,6 +1,20 @@
 import struct
 import zipfile
 
+def get_pot_files_info(zip_path):
+    """
+    获取 ZIP 压缩包中所有 .pot 文件的名称和数量。
+
+    Args:
+        zip_path: ZIP 压缩包路径
+
+    Returns:
+        tuple: 包含两个元素的元组，第一个元素是 .pot 文件的数量，第二个元素是 .pot 文件的名称列表。
+    """
+    with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+        pot_files = [file for file in zip_ref.namelist() if file.endswith('.pot')]
+        return len(pot_files), pot_files
+
 def decode_tag_code(tag_code_bytes):
     """从两个字节的标签码解码为字符."""
      # 移除可能存在的空字节
