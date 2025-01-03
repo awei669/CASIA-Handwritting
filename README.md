@@ -2,3 +2,4 @@
 
 参考：
 https://nlpr.ia.ac.cn/databases/handwriting/Online_database.html
+https://www.cnblogs.com/eewpan/p/18400437
