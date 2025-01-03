@@ -214,12 +214,9 @@ if __name__ == "__main__":
     samples, char_list = read_pot_file(pot_filepath)
     print(char_list['迂'])
 
-    # for i, sample in enumerate(samples):
-    #     print(f"Sample {i + 1}:")
-    #     print(f"  Sample Size: {sample['sample_size']}")
-    #     print(f"  Tag Code: {sample['tag_code']}")
-    #     print(f"  Stroke Number: {sample['stroke_number']}")
-    #     for j, stroke in enumerate(sample['strokes']):
-    #         print(f"  Stroke {j + 1}:")
-    #         for point in stroke:
-    #             print(f"    Point: {point}")
+    # 读取压缩文件中的pot文件，但不解压
+    # pot_nums, pot_list = get_pot_files_info(f'./CASIA/OLHWDB1.0-1.2/Pot1.0.Train.zip')
+    # for pot_name in tqdm(pot_list):
+
+    #     # char_list, sizes = read_pot(f'{path_root}/{zip_name}', pot_name)s
+    #     samples, char_list = read_pot_zip_file(f'{path_root}/{zip_name}', pot_name)
